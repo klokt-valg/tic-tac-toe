@@ -1,0 +1,44 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Tic-tac-toe game implemented with Vue.js. You can play with a computer.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klokt-valg/tic-tac-toe.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "vue.js",
+    "AI"
+  ],
+  "author": "klokt-valg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klokt-valg/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/klokt-valg/tic-tac-toe#readme",
+  "dependencies": {
+    "gsap": "^2.1.2",
+    "lodash": "^4.17.11",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
