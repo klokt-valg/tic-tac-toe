@@ -1,7 +1,8 @@
-const _ = require('lodash');
+const _ = require('lodash')
+const computer = require('../ai/computer')
 
-const store = {
-    debug: true,
+module.exports = {
+    debug: false,
     state: {
         grid: _.map(_.range(0, 9), (index) => {
             return {
@@ -58,7 +59,13 @@ const store = {
             return _.difference(combination, moves).length === 0;
         })
         this.state.draw = (!this.state.wins && this.state.tilesLeft <= 0)
+
+        return this.state.wins || this.state.draw
+    },
+
+    doComputerMoveAction() {
+        const cs = computer.nextSelect(this.state.grid)
+        this.selectAction(cs)
+        this.checkWinnerAction()
     }
 }
-
-module.exports = store;

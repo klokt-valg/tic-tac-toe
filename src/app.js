@@ -1,9 +1,10 @@
-const Vue = require('vue');
-const _ = require('lodash');
-const Elastic = require('gsap').Elastic;
+const Vue = require('vue')
+const _ = require('lodash')
+const Elastic = require('gsap').Elastic
 
-const store = require('./store/store');
-const block = require('./components/block');
+const store = require('./store/store')
+const block = require('./components/block')
+const computer = require('./ai/computer')
 
 module.exports = new Vue({
     name: 'app',
@@ -35,7 +36,13 @@ module.exports = new Vue({
             }
 
             store.selectAction(index);
-            store.checkWinnerAction();
+            if(!store.checkWinnerAction()) {
+                if(this.myTurn == computer.myTurn) {
+                    setTimeout(() => {
+                        store.doComputerMoveAction();
+                    }, 10);
+                }
+            }
         },
 
         restart() {
