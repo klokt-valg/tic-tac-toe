@@ -17,7 +17,6 @@ module.exports = Vue.component('win', {
     `,
 
     props: {
-        winner: Number,
         clickHandler: {
             type: Function,
             default: null
